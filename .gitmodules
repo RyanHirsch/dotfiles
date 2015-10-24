@@ -31,3 +31,6 @@
 [submodule "vim/bundle/vim-monokai"]
 	path = vim/bundle/vim-monokai
 	url = https://github.com/sickill/vim-monokai.git
+[submodule "vim/bundle/vim-colorschemes"]
+	path = vim/bundle/vim-colorschemes
+	url = https://github.com/flazz/vim-colorschemes.git

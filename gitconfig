@@ -1,0 +1,21 @@
+[user]
+    name = Ryan Hirsch
+    email = ryan.hirsch@gmail.com
+[core]
+    excludesfile = /Users/ryanhirsch/.gitignore_global
+    autocrlf = input
+    editor = vim
+[color]
+    ui = true
+[push]
+    default = simple
+[alias]
+    s = status -s
+    lg = log --oneline --decorate --graph
+	co = checkout
+	st = status
+	ci = commit
+[pull]
+    rebase = true
+[branch]
+    autosetuprebase = always

@@ -56,8 +56,12 @@ plugins=(git)
 export PATH="/Users/ryanhirsch/.rbenv/shims:/Users/ryanhirsch/.dnx/runtimes/dnx-mono.1.0.0-beta4/bin:/Users/ryanhirsch/.nvm/versions/node/v4.2.1/bin:/usr/local/heroku/bin:/Users/ryanhirsch/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+export EDITOR=vim
+export VISUAL=vim
+
 source $ZSH/oh-my-zsh.sh
 
+alias tmux="tmux -2"
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 

@@ -25,9 +25,10 @@ if has("gui_running")
     elseif has("gui_win32")
         set guifont=Consolas:h14:cANSI
     endif
+else
+    set t_Co=256
+    set term=screen-256color
 endif
-
-set t_Co=256
 
 function! FormatJSON()
     :'<,'>!python -m json.tool

@@ -1,11 +1,11 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/ryanhirsch/.oh-my-zsh
+export ZSH=/home/ryanhirsch/src/dotfiles
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+ZSH_THEME="bullet-train"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -53,11 +53,21 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/Users/ryanhirsch/.rbenv/shims:/Users/ryanhirsch/.dnx/runtimes/dnx-mono.1.0.0-beta4/bin:/Users/ryanhirsch/.nvm/versions/node/v4.2.1/bin:/usr/local/heroku/bin:/Users/ryanhirsch/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
+export PATH="/Users/ryanhirsch/.dnx/runtimes/dnx-mono.1.0.0-beta4/bin:/usr/local/heroku/bin:/Users/ryanhirsch/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 export EDITOR=vim
 export VISUAL=vim
+
+# all of our zsh files
+typeset -U config_files
+config_files=($ZSH/**/*.zsh)
+
+# load the path files
+for file in ${(M)config_files:#*/path.zsh}
+do
+    source $file
+done
 
 source $ZSH/oh-my-zsh.sh
 
@@ -88,4 +98,3 @@ alias tmux="tmux -2"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export NODE_ENV="development"
-

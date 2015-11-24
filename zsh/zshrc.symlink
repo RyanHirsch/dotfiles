@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/ryanhirsch/src/dotfiles
+export DOTFILES=~/src/dotfiles
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -53,15 +54,12 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/Users/ryanhirsch/.dnx/runtimes/dnx-mono.1.0.0-beta4/bin:/usr/local/heroku/bin:/Users/ryanhirsch/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
-
-export EDITOR=vim
-export VISUAL=vim
 
 # all of our zsh files
 typeset -U config_files
-config_files=($ZSH/**/*.zsh)
+config_files=($DOTFILES/**/*.zsh)
 
 # load the path files
 for file in ${(M)config_files:#*/path.zsh}
@@ -70,8 +68,7 @@ do
 done
 
 source $ZSH/oh-my-zsh.sh
-
-alias tmux="tmux -2"
+$DOTFILES/z/z.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -96,5 +93,3 @@ alias tmux="tmux -2"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-export NODE_ENV="development"

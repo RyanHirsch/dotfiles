@@ -15,6 +15,7 @@
     co = checkout
     st = status
     ci = commit
+    updatesubs = "!sh -c \"git submodule foreach git pull origin master\" "
 [pull]
     rebase = true
 [branch]

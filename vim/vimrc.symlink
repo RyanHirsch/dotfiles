@@ -1,8 +1,8 @@
 execute pathogen#infect()
 
 set expandtab
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set number
 set cursorline
 set hidden
@@ -122,6 +122,9 @@ command!  Bdi :call DeleteInactiveBufs()
 
 set directory=~/.vim/_tmp/
 set backupdir=~/.vim/backup/
+
+autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd Filetype elixir setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 runtime! plugin/sensible.vim
 

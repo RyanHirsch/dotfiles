@@ -49,3 +49,6 @@
 [submodule "vim/bundle/syntastic-local-eslint"]
 	path = vim/bundle/syntastic-local-eslint
 	url = https://github.com/mtscout6/syntastic-local-eslint.vim.git
+[submodule "vim/bundle/editorconfig"]
+	path = vim/bundle/editorconfig
+	url = https://github.com/editorconfig/editorconfig-vim.git

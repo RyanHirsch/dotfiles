@@ -12,7 +12,15 @@ syntax enable
 
 filetype plugin indent on
 
-colorscheme monokai
+" colorscheme monokai
+colorscheme OceanicNext
+set background=dark
+
+highlight CursorLine ctermbg=234
+highlight LineNr ctermbg=234
+highlight LineNr ctermfg=231
+highlight LineNr cterm=bold
+
 if has("gui_running")
     " set background=dark
     " colorscheme solarized
@@ -87,6 +95,7 @@ vnoremap <silent> s //e<C-r>=&selection=='exclusive'?'+1':''<CR><CR>
     \:<C-u>call histdel('search',-1)<Bar>let @/=histget('search',-1)<CR>gv
 omap s :normal vs<CR>
 
+" let g:airline_theme='oceanicnext'
 let g:jsx_ext_required = 0
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1

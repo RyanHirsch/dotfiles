@@ -52,3 +52,6 @@
 [submodule "vim/bundle/editorconfig"]
 	path = vim/bundle/editorconfig
 	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule "vim/bundle/es.next.syntax"]
+	path = vim/bundle/es.next.syntax
+	url = https://github.com/othree/es.next.syntax.vim.git

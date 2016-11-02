@@ -35,6 +35,9 @@ set cursorline
 set hidden
 set mouse=a
 
+set foldmethod=syntax
+set foldlevelstart=20
+
 syntax on
 syntax enable
 
@@ -185,6 +188,8 @@ autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 autocmd Filetype elixir setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+autocmd FileType xml setlocal foldmethod=indent foldlevelstart=20 foldminlines=0
 
 runtime! plugin/sensible.vim
 
